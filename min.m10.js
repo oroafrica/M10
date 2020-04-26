@@ -326,7 +326,7 @@ class Item
 			
 			.concat("</defs>")
 			
-			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_bname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 150 90)' >Cara</text></g>")
+			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_bname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 175 90)' >Cara</text></g>")
 			.concat("</svg>");
 			
         item.cname =
@@ -353,7 +353,7 @@ class Item
 			
 			.concat("</defs>")
 			
-			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_cname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 150 90)' >Nina</text></g>")
+			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_cname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 175 90)' >Nina</text></g>")
 			.concat("</svg>");
 		
 		item.mname = 
@@ -380,7 +380,7 @@ class Item
 			
 			.concat("</defs>")
 			
-			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_mname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 150 90)' >Amelia</text></g>")
+			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_mname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 175 90)' >Amelia</text></g>")
 			.concat("</svg>");
 			
 			switch(choice)
