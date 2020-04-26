@@ -7,8 +7,8 @@ class Product
         this.hasCanvas = false;
         this.canvas = null;
         this.ctx = null; 
-        this.w = 400;
-		this.h = 150;
+        this.w = 350;
+				this.h = 150;
         this.svg = null;
         this.ns = "http://www.w3.org/2000/svg";
         this._title = $(document).find("title").text().toLowerCase();
@@ -215,16 +215,16 @@ class Product
             img.onload = ()=> 
             {
                 this.clsCanvas();
-				//dropshadow
-				this.ctx.shadowOffsetX=3;
-				this.ctx.shadowOffsetY=12;
-				this.ctx.shadowBlur=2;
-				this.ctx.shadowColor="rgba(0,0,0,0.03)";
-				//background color
-				this.ctx.fillStyle="rgba(228,243,249,0.7)";
-				this.ctx.fillOpacity=0.5;
-				this.ctx.globalCompositeOperation = 'destination-under'
-				this.ctx.fillRect(0, 0, canvas.width, canvas.height);
+								//dropshadow
+								this.ctx.shadowOffsetX=3;
+								this.ctx.shadowOffsetY=12;
+								this.ctx.shadowBlur=2;
+								this.ctx.shadowColor="rgba(0,0,0,0.03)";
+								//background color
+								this.ctx.fillStyle="rgba(228,243,249,0.7)";
+								this.ctx.fillOpacity=0.5;
+								this.ctx.globalCompositeOperation = 'destination-under'
+								this.ctx.fillRect(0, 0, canvas.width, canvas.height);
 
                 this.ctx.drawImage(img, 0, 0, this.w, this.h);
             };
@@ -303,7 +303,7 @@ class Item
 	{
 		var item = {};
 		item.bname =
-			 "<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='400' height='150'>"
+			 "<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='350' height='150'>"
 			.concat("<defs>")
 			
 			.concat("<style type='text/css'>@font-face")
@@ -326,11 +326,11 @@ class Item
 			
 			.concat("</defs>")
 			
-			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_bname' filter='url(#Bevel)' fill='#bbb100' transform='matrix(1 0 0 1 200 90)' >Cara</text></g>")
+			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_bname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 200 90)' >Cara</text></g>")
 			.concat("</svg>");
 			
         item.cname =
-			"<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='400' height='150'>"
+			"<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='350' height='150'>"
 			.concat("<defs>")
 			
 			.concat("<style type='text/css'>@font-face")
@@ -353,11 +353,11 @@ class Item
 			
 			.concat("</defs>")
 			
-			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_cname' filter='url(#Bevel)' fill='#bbb100' transform='matrix(1 0 0 1 200 90)' >Nina</text></g>")
+			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_cname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 200 90)' >Nina</text></g>")
 			.concat("</svg>");
 		
 		item.mname = 
-			"<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='400' height='150'>"
+			"<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='350' height='150'>"
 			.concat("<defs>")
 			
 			.concat("<style type='text/css'>@font-face")
@@ -380,7 +380,7 @@ class Item
 			
 			.concat("</defs>")
 			
-			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_mname' filter='url(#Bevel)' fill='#bbb100' transform='matrix(1 0 0 1 200 90)' >Amelia</text></g>")
+			.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_mname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 200 90)' >Amelia</text></g>")
 			.concat("</svg>");
 			
 			switch(choice)
