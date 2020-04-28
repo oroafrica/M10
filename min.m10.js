@@ -299,6 +299,16 @@ class Product
 				img.onload = ()=> 
 				{
 					this.clsCanvas();
+					//dropshadow
+								this.ctx.shadowOffsetX=3;
+								this.ctx.shadowOffsetY=12;
+								this.ctx.shadowBlur=2;
+								this.ctx.shadowColor="rgba(0,0,0,0.03)";
+								//background color
+								this.ctx.fillStyle="rgba(228,243,249,0.7)";
+								this.ctx.fillOpacity=0.5;
+								this.ctx.globalCompositeOperation = 'destination-under'
+								this.ctx.fillRect(0, 0, canvas.width, canvas.height);
 					this.ctx.drawImage(img, -40, -30, this.w*1.2, this.h*1.2);
 				};
 			} 
@@ -321,6 +331,16 @@ class Product
 				img.onload = ()=> 
 				{
 					this.clsCanvas();
+					//dropshadow
+								this.ctx.shadowOffsetX=3;
+								this.ctx.shadowOffsetY=12;
+								this.ctx.shadowBlur=2;
+								this.ctx.shadowColor="rgba(0,0,0,0.03)";
+								//background color
+								this.ctx.fillStyle="rgba(228,243,249,0.7)";
+								this.ctx.fillOpacity=0.5;
+								this.ctx.globalCompositeOperation = 'destination-under'
+								this.ctx.fillRect(0, 0, canvas.width, canvas.height);
 					this.ctx.drawImage(img,0 , 0, this.w, this.h);
 				};
 			} 
