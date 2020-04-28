@@ -282,13 +282,62 @@ class Product
 				}
 			});
     }
-    
+	
+  scaleCanvas()
+	{
+		$("#canvas").mouseenter(()=>
+		{
+			try 
+			{
+				
+				var serializer = new XMLSerializer();
+				var svgString = serializer.serializeToString(this.svg);
+
+				var img = new Image();
+				img.src = "data:image/svg+xml,".concat(encodeURIComponent(svgString));
+
+				img.onload = ()=> 
+				{
+					this.clsCanvas();
+					this.ctx.drawImage(img, -40, -30, this.w*1.2, this.h*1.2);
+				};
+			} 
+			catch(e) 
+			{
+				console.log("scaleCanvas: "+e);
+			}
+		})
+		.mouseout(()=>
+		{
+			try 
+			{
+				
+				var serializer = new XMLSerializer();
+				var svgString = serializer.serializeToString(this.svg);
+
+				var img = new Image();
+				img.src = "data:image/svg+xml,".concat(encodeURIComponent(svgString));
+
+				img.onload = ()=> 
+				{
+					this.clsCanvas();
+					this.ctx.drawImage(img,0 , 0, this.w, this.h);
+				};
+			} 
+			catch(e) 
+			{
+				console.log("scaleCanvas: "+e);
+			}
+		});
+	}
+	
     init()
     {
 		if($("#canvas").length > 0)
 		{
 				this.loadSvg();
 				this.render();
+			this.scaleCanvas();
 		}
 		else
 		{
