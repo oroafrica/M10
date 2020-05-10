@@ -4,18 +4,18 @@ class Sname
 {
     constructor()
     {
-        this.hasCanvas = false;
-        this.canvas = null;
-        this.ctx = null; 
-        this.w = 350;
-		this.h = 200;
-        this.svg = null;
-        this.ns = "http://www.w3.org/2000/svg";
-        this._title = $(document).find("title").text();
-		
-		this.txt = null;
-		this.selOne = null;
-		this.selTwo = null;
+	this.hasCanvas = false;
+	this.canvas = null;
+	this.ctx = null; 
+	this.w = 350;
+	this.h = 200;
+	this.svg = null;
+	this.ns = "http://www.w3.org/2000/svg";
+	this._title = $(document).find("title").text();
+
+	this.txt = null;
+	this.selOne = null;
+	this.selTwo = null;
     }
 
     test(){console.log("Product.class");}
@@ -30,11 +30,6 @@ class Sname
 
 			var msg = new Item().svg();
 			var parser = new DOMParser();
-
-			// this.svg = parser.parseFromString(msg,"image/svg+xml");
-			// this.drawSvg(this.svg);   
-			
-
 			this.svg = parser.parseFromString(msg,"image/svg+xml");
 			this.svg.getElementsByTagName("text")[0].textContent = String.fromCharCode(61076) + "ex" +String.fromCharCode(62105) + String.fromCharCode(63138);
 			this.drawSvg(this.svg);   
@@ -82,7 +77,6 @@ class Sname
 			if($(tgt)[index].options[1].text === "Silver")
 			{
 			this.selTwo =  $(tgt)[index];
-			//console.log($(tgt)[index].options[1].text);
 			}	
 			});
 		}
@@ -345,9 +339,6 @@ class Sname
 			_target.appendChild(_body);
 			_target.appendChild(_suffix);
 			_target.appendChild(_swif);
-			// _target.appendChild(_mask);
-			
-			// _target.appendChild(_accent);
         } 
         catch (e) 
         {
