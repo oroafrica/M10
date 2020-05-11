@@ -8,7 +8,7 @@ class Hname
         this.canvas = null;
         this.ctx = null; 
         this.w = 300;
-		this.h = 150;
+				this.h = 150;
         this.svg = null;
         this.ns = "http://www.w3.org/2000/svg";
         this._title = $(document).find("title").text().toLowerCase();
@@ -169,7 +169,7 @@ class Hname
             var regex = /[\(\)\[\]:;#@\^\|\?\",<>\!\\_=\+\*~`\.\{\}']/g;
 
             inputName = inputName.split(" ").join("");
-            inputName = inputName.replace(regex, "");
+            inputName = inputName.replace(regex, "").replace(/[A-Z0-9]/gi,"");
             
             //map prefix, body, suffix
             let _a, _b, _c, _d;
