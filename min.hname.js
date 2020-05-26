@@ -41,35 +41,34 @@ class Hname
 	
     getInput()
     {
-		try
-		{
-			this.txt = $("input[title='Enter your name here']"); 
-			//console.log("getInput: "+ $(this.txt).val());
-		}
-		catch(e)
-		{
-			console.log("getInput: " + e)
-		}
+			try
+			{
+				this.txt = $("input[title='Enter your name here']"); 
+				//console.log("getInput: "+ $(this.txt).val());
+			}
+			catch(e)
+			{
+				console.log("getInput: " + e)
+			}
     }
 
     getSelAccent()
     {
-        try
-		{
-				var tgt = $('select').toArray();
-			//this.selOne =  $(tgt).eq(2);
-				$.each(tgt, (index)=> 
-				{
-					if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Heart")
+			try
+			{
+					var tgt = $('select').toArray();
+					$.each(tgt, (index)=> 
 					{
-						this.selOne =  $(tgt)[index];
-					}	
-				});
-		}
-		catch(e)
-		{
-			console.log("getAccent" + e);
-		}
+						if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Heart")
+						{
+							this.selOne =  $(tgt)[index];
+						}	
+					});
+			}
+			catch(e)
+			{
+				console.log("getAccent" + e);
+			}
     }
 	
 
@@ -102,8 +101,11 @@ class Hname
 			var _target = this.svg.getElementsByTagName("text")[1];
 			_target.style.fill = alloy[selTwo];
 			
-			let _target2 = $(this.svg).find("text")[0];
-			_target2.style.fill = mask[selTwo];
+			if(this.txt.value.length > 1)
+			{
+				let _target2 = $(this.svg).find("text")[0];
+				_target2.style.fill = mask[selTwo];
+			}
 		}
 		catch(e)
 		{
@@ -187,74 +189,73 @@ class Hname
 				
 																							 
 			
-            if(inputName.substring(0,1).match(/^[\&|\-\@]/g))
-            {
-                return;
-            }
-			else if(inputName === 'Enteryournamehere')
-			{
-				return;
-			}    
+				if(inputName.substring(0,1).match(/^[\&|\-\@]/g))
+				{
+						return;
+				}
+				else if(inputName === 'Enteryournamehere')
+				{
+					return;
+				}    
             
-			_a="";
-			if(inputName.length > 0 && selectEndOne === 0)
-            {
-                _a = String.fromCharCode(SUFFIX[selectEndOne]);
-                _ma =String.fromCharCode(SUFFIX[selectEndOne]);
-            }
-			else if(inputName.length > 0 && selectEndOne > 0)
-			{
-				_a = String.fromCharCode(63) + String.fromCharCode(SUFFIX[selectEndOne]);
-				_ma = String.fromCharCode(SUFFIX[selectEndOne]);
-			}
-	        
-			_b="";_mb="";
+				_a="";
+				if(inputName.length > 0 && selectEndOne === 0)
+							{
+									_a = String.fromCharCode(SUFFIX[selectEndOne]);
+									_ma =String.fromCharCode(SUFFIX[selectEndOne]);
+							}
+				else if(inputName.length > 0 && selectEndOne > 0)
+				{
+					_a = String.fromCharCode(63) + String.fromCharCode(SUFFIX[selectEndOne]);
+					_ma = String.fromCharCode(SUFFIX[selectEndOne]);
+				}
+
+				_b="";_mb="";
             if(inputName.length > 2 && selectEndOne === 0)
             {
                 _b = inputName.substring(1,inputName.length-1);
                 _mb = maskName.substring(1,maskName.length-1);
             }
-			else if(inputName.length > 2 && selectEndOne > 0)
-			{
-				_b = inputName.substring(0,inputName.length-1);
-                _mb = maskName.substring(0,maskName.length-1);
-			}
-            if(inputName.length > 1)
-			{
-				_c = String.fromCharCode(inputName.substring(inputName.length-1,inputName.length).charCodeAt(0) + x)+String.fromCharCode(63);
-				_mc = String.fromCharCode(maskName.substring(maskName.length-1,maskName.length).charCodeAt(0) + x);
-			}
+				else if(inputName.length > 2 && selectEndOne > 0)
+				{
+					_b = inputName.substring(0,inputName.length-1);
+									_mb = maskName.substring(0,maskName.length-1);
+				}
+							if(inputName.length > 1)
+				{
+					_c = String.fromCharCode(inputName.substring(inputName.length-1,inputName.length).charCodeAt(0) + x)+String.fromCharCode(63);
+					_mc = String.fromCharCode(maskName.substring(maskName.length-1,maskName.length).charCodeAt(0) + x);
+				}
 
-			var _target = svgDoc.getElementsByTagName("text")[0];
-            _target.textContent = "";
+				var _target = svgDoc.getElementsByTagName("text")[0];
+				_target.textContent = "";
             
-            var _prefix ,_body, _suffix;
-            _prefix = document.createElementNS(this.ns,"tspan");
-            _body = document.createElementNS(this.ns,"tspan");
-            _suffix = document.createElementNS(this.ns,"tspan"); 
+				var _prefix ,_body, _suffix;
+				_prefix = document.createElementNS(this.ns,"tspan");
+				_body = document.createElementNS(this.ns,"tspan");
+				_suffix = document.createElementNS(this.ns,"tspan"); 
            
-			_prefix.textContent = _a;
-			_body.textContent = _b;
-			_suffix.textContent = _c;
-			_target.appendChild(_suffix);
-			_target.appendChild(_body);
-			_target.appendChild(_prefix);
-			
-			var _target2 = svgDoc.getElementsByTagName("text")[1];
-			_target2.textContent = "";
-			
-			var _prefix2 ,_body2, _suffix2;
-            _prefix2 = document.createElementNS(this.ns,"tspan");
-            _body2 = document.createElementNS(this.ns,"tspan");
-            _suffix2 = document.createElementNS(this.ns,"tspan");
-			
-			_prefix2.textContent = this.textReplacer(_ma);
-			_body2.textContent = this.textReplacer(_mb);
-			_suffix2.textContent = this.textReplacer(_mc);
-			_target2.appendChild(_suffix2);
-			_target2.appendChild(_body2);
-			_target2.appendChild(_prefix2)
+				_prefix.textContent = _a;
+				_body.textContent = _b;
+				_suffix.textContent = _c;
+				_target.appendChild(_suffix);
+				_target.appendChild(_body);
+				_target.appendChild(_prefix);
 
+				var _target2 = svgDoc.getElementsByTagName("text")[1];
+				_target2.textContent = "";
+
+				var _prefix2 ,_body2, _suffix2;
+				_prefix2 = document.createElementNS(this.ns,"tspan");
+				_body2 = document.createElementNS(this.ns,"tspan");
+				_suffix2 = document.createElementNS(this.ns,"tspan");
+
+				_prefix2.textContent = this.textReplacer(_ma);
+				_body2.textContent = this.textReplacer(_mb);
+				_suffix2.textContent = this.textReplacer(_mc);
+				_target2.appendChild(_suffix2);
+				_target2.appendChild(_body2);
+				_target2.appendChild(_prefix2)
         } 
         catch(e) 
         {
@@ -461,7 +462,7 @@ class Item
 		.concat("<g>")
 
 		.concat("<text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#808080' transform='matrix(1 0 0 1 172 90)' ></text>")
-		.concat("<text id='txt2' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 172 90)' ></text>")
+		.concat("<text id='txt2' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#bbb100' transform='matrix(1 0 0 1 172 90)' ></text>")
 
 		.concat("</g>")
 		.concat("</svg>");
