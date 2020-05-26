@@ -174,7 +174,7 @@ class Hname
 
 					var regex = /[\(\)\[\]:;#@\^\|\?\",<>\!\\_=\+\*~`\.\{\}']/g;
 
-					inputName = inputName.split(" ").join("");
+					//inputName = inputName.split(" ").join("");
 					inputName = inputName.replace(regex, "").replace(/[A-Z0-9]/gi,"");
 	
 					//map prefix, body, suffix
