@@ -61,7 +61,10 @@ class Hname
 					{
 						if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Heart")
 						{
-							this.selOne =  $(tgt)[index];
+								if($(this.txt).val().length > 1)
+								{
+									this.selOne =  $(tgt)[index];
+								}
 						}	
 					});
 			}
