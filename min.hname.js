@@ -161,7 +161,7 @@ class Hname
 			.replace(String.fromCharCode(62522),String.fromCharCode(63449))
 			.replace(String.fromCharCode(61522),String.fromCharCode(61449));
 	}
-
+/*
     textFactory(svgDoc, inputName, selectEndOne)
     {
         try 
@@ -187,7 +187,7 @@ class Hname
 			  
 				  console.log(inputName);
 																							 
-			/*
+			
             if(inputName.substring(0,1).match(/^[\&|\-\@]/g))
             {
                 return;
@@ -255,13 +255,14 @@ class Hname
 			_target2.appendChild(_suffix2);
 			_target2.appendChild(_body2);
 			_target2.appendChild(_prefix2)
-			*/
+		
         } 
         catch(e) 
         {
             console.log("textFactory: " + e);
         }
     }
+			*/
 	
 	
     drawSvg(svgDoc)
