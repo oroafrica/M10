@@ -44,7 +44,7 @@ class Hname
 		try
 		{
 			this.txt = $("input[title='Enter your name here']"); 
-			console.log("getInput: "+ this.txt);
+			console.log("getInput: "+ $(this.txt).val());
 		}
 		catch(e)
 		{
@@ -161,13 +161,13 @@ class Hname
 			.replace(String.fromCharCode(62522),String.fromCharCode(63449))
 			.replace(String.fromCharCode(61522),String.fromCharCode(61449));
 	}
-/*
+
     textFactory(svgDoc, inputName, selectEndOne)
     {
         try 
         {
-					if(typeof selectEndOne === 'undefined'){selectEndOne = 0;
-					if(typeof inputName === 'undefined'){inputName = "אננה";
+					if(typeof selectEndOne === 'undefined'){selectEndOne = 0};
+					if(typeof inputName === 'undefined'){inputName = "אננה"};
 					//suffix map
 					var SUFFIX = {0:60000 + inputName.substring(0,1).charCodeAt(0), 1:60091, 2:60040, 3:60123};
 
@@ -177,7 +177,7 @@ class Hname
 
 					inputName = inputName.split(" ").join("");
 					inputName = inputName.replace(regex, "").replace(/[A-Z0-9]/gi,"");
-
+	
 					//map prefix, body, suffix
 					let _a, _b, _c, _d;
 					let _ma, _mb, _mc, _md;
@@ -255,14 +255,14 @@ class Hname
 			_target2.appendChild(_suffix2);
 			_target2.appendChild(_body2);
 			_target2.appendChild(_prefix2)
-		
+
         } 
         catch(e) 
         {
             console.log("textFactory: " + e);
         }
     }
-			*/
+		
 	
 	
     drawSvg(svgDoc)
