@@ -34,7 +34,7 @@ class Sname
 			this.svg.getElementsByTagName("text")[0].textContent = String.fromCharCode(61076) + "ex" + String.fromCharCode(62105) + String.fromCharCode(63138);
 			this.drawSvg(this.svg);   
 
-			console.log("SVG Loaded at: " + this._title);
+			//console.log("SVG Loaded at: " + this._title);
 		}
 		catch(e)
 		{
@@ -82,7 +82,7 @@ class Sname
 		}
 		catch(e)
 		{
-			console.log("getAlloy: " + e);
+			//console.log("getAlloy: " + e);
 		}
     }
 	
@@ -104,7 +104,7 @@ class Sname
     {
         if($(this.txt).val() === "")
         {
-            console.log("empty/clear canvas");
+            //console.log("empty/clear canvas");
             this.clsCanvas();
         }
     }
