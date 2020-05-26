@@ -7,7 +7,7 @@ class Hname
 		this.hasCanvas = false;
 		this.canvas = null;
 		this.ctx = null; 
-		this.w = 300;
+		this.w = 350;
 		this.h = 150;
 		this.svg = null;
 		this.ns = "http://www.w3.org/2000/svg";
@@ -44,6 +44,7 @@ class Hname
 		try
 		{
 			this.txt = $("input[title='Enter your name here']"); 
+			console.log("getInput: "+ this.txt);
 		}
 		catch(e)
 		{
@@ -347,7 +348,7 @@ class Hname
 			});
     }
 	*/
-	/*
+
 	scaleCanvas()
 	{
 		$("#canvas").mouseenter(()=>
@@ -415,14 +416,14 @@ class Hname
 			}
 		});
 	}
-	*/
+
     init()
     {
 			if($("#canvas").length > 0)
 			{
 				this.loadSvg();
 // 				this.render();
-// 				this.scaleCanvas();
+				this.scaleCanvas();
 			}
 			else
 			{
