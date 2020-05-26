@@ -93,7 +93,7 @@ class Hname
 			}
     }
 	
-	/*
+	
 	alloyColor(selTwo)
 	{
 		try
@@ -111,7 +111,7 @@ class Hname
 			console.log("alloyColor: " + e);
 		}
 	}
-	*/
+
 	
 	clsCanvas()
 	{
@@ -461,8 +461,8 @@ class Item
 		.concat("</defs>")
 		.concat("<g>")
 
-		.concat("<text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#808080' transform='matrix(1 0 0 1 150 90)' ></text>")
-		.concat("<text id='txt2' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 150 90)' ></text>")
+		.concat("<text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#808080' transform='matrix(1 0 0 1 175 90)' ></text>")
+		.concat("<text id='txt2' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 175 90)' ></text>")
 
 		.concat("</g>")
 		.concat("</svg>");
