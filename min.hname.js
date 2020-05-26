@@ -166,7 +166,7 @@ class Hname
         try 
         {
 					if(typeof selectEndOne === 'undefined'){selectEndOne = 0};
-					if(typeof inputName === 'undefined'){inputName = "אננה"};
+					if(typeof inputName === 'undefined' || inputName === ""){inputName = "אננה"};
 					//suffix map
 					var SUFFIX = {0:60000 + inputName.substring(0,1).charCodeAt(0), 1:60091, 2:60040, 3:60123};
 
@@ -184,7 +184,7 @@ class Hname
 					var maskName = inputName;
 					inputName = inputName.split("").join("@");
 			  
-				  console.log(inputName);
+				
 																							 
 			
             if(inputName.substring(0,1).match(/^[\&|\-\@]/g))
@@ -460,8 +460,8 @@ class Item
 		.concat("</defs>")
 		.concat("<g>")
 
-		.concat("<text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#808080' transform='matrix(1 0 0 1 175 90)' ></text>")
-		.concat("<text id='txt2' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 175 90)' ></text>")
+		.concat("<text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#808080' transform='matrix(1 0 0 1 172 90)' ></text>")
+		.concat("<text id='txt2' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_hname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 172 90)' ></text>")
 
 		.concat("</g>")
 		.concat("</svg>");
