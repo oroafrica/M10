@@ -8,7 +8,7 @@ class Sname
 	this.canvas = null;
 	this.ctx = null; 
 	this.w = 350;
-	this.h = 200;
+	this.h = 250;
 	this.svg = null;
 	this.ns = "http://www.w3.org/2000/svg";
 	this._title = $(document).find("title").text();
@@ -31,7 +31,7 @@ class Sname
 			var msg = new Item().svg();
 			var parser = new DOMParser();
 			this.svg = parser.parseFromString(msg,"image/svg+xml");
-			this.svg.getElementsByTagName("text")[0].textContent = String.fromCharCode(61076) + "ex" +String.fromCharCode(62105) + String.fromCharCode(63138);
+			this.svg.getElementsByTagName("text")[0].textContent = String.fromCharCode(61076) + "ex" + String.fromCharCode(62105) + String.fromCharCode(63138);
 			this.drawSvg(this.svg);   
 
 			console.log("SVG Loaded at: " + this._title);
@@ -59,7 +59,7 @@ class Sname
         try
 		{
 			let tgt = $('select').toArray();
-			this.selOne =  $(tgt).eq(1);
+			this.selOne =  $(tgt).eq(2);
 		}
 		catch(e)
 		{
@@ -460,7 +460,7 @@ class Item
 {
 	svg()
 	{
-		return "<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='350' height='200'>"
+		return "<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='350' height='250'>"
 		.concat("<defs>")
 		.concat("<style type='text/css'>@font-face")
 		.concat("{")
@@ -482,7 +482,7 @@ class Item
 		
 		.concat("</defs>")
 		
-		.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_sname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 185 110)' ><tspan>ngelin</tspan></text></g>")
+		.concat("<g><text id='txt1' style='font-size:25;stroke:none;text-anchor:middle;font-family:wz_sname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 185 140)' ><tspan>ngelin</tspan></text></g>")
 		.concat("</svg>");
 	}	
 }
