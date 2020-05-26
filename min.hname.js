@@ -421,7 +421,7 @@ class Hname
 			if($("#canvas").length > 0)
 			{
 				this.loadSvg();
-// 				this.render();
+				this.render();
 				this.scaleCanvas();
 			}
 			else
