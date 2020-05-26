@@ -302,7 +302,7 @@ class Sname
                 _a = String.fromCharCode(inputName.charCodeAt(0) + x);
             }
 						
-					  if(inputName === "Enteryournamehere"){return;}
+					  if(inputName === "Enteryournamehere"){return String.fromCharCode(61076) + "ex" + String.fromCharCode(62105) + String.fromCharCode(63138);}
             _b = "";
             if(inputName.length > 2)
             {
