@@ -193,7 +193,7 @@ class Sname
 			{
 				swif = String.fromCharCode(63186);
 			}
-			console.log("swift: " +swif.codePointAt(0) + accento[index]);
+			//console.log("swift: " +swif.codePointAt(0) + accento[index]);
 
 			return String.fromCharCode(swif.codePointAt(0) + accento[index]); //swif;
 		}
@@ -296,12 +296,13 @@ class Sname
             {
                 return;
             }
-
+						
             else if(inputName.length > 0)
             {
                 _a = String.fromCharCode(inputName.charCodeAt(0) + x);
             }
-			
+						
+					  if(inputName === "Enteryournamehere"){return;}
             _b = "";
             if(inputName.length > 2)
             {
