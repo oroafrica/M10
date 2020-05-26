@@ -404,18 +404,18 @@ class Hname
 	
     init()
     {
-		if($("#canvas").length > 0)
-		{
-			this.loadSvg();
-			this.render();
-			this.scaleCanvas();
-		}
-		else
-		{
-			console.log("No Canvas Found/Contact product.js vendor");
-		}
+			if($("#canvas").length > 0)
+			{
+				this.loadSvg();
+// 				this.render();
+// 				this.scaleCanvas();
+			}
+			else
+			{
+				console.log("No Canvas Found/Contact product.js vendor");
+			}
     }
-}
+	}
 
 class Item
 {
