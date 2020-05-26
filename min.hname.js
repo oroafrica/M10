@@ -8,7 +8,7 @@ class Hname
         this.canvas = null;
         this.ctx = null; 
         this.w = 300;
-				this.h = 150;
+		this.h = 150;
         this.svg = null;
         this.ns = "http://www.w3.org/2000/svg";
         this._title = $(document).find("title").text().toLowerCase();
@@ -40,6 +40,7 @@ class Hname
 		}
     }
 	
+	/*
     getInput()
     {
 		try
@@ -51,7 +52,8 @@ class Hname
 			console.log("getInput: " + e)
 		}
     }
-	
+	*/
+	/*
     getSelAccent()
     {
         try
@@ -71,7 +73,8 @@ class Hname
 			console.log("getAccent" + e);
 		}
     }
-	
+	*/
+	/*
     getSelAlloy()
     {
 		try
@@ -91,7 +94,8 @@ class Hname
 			console.log("getAlloy: " + e);
 		}
     }
-	
+	*/
+	/*
 	alloyColor(selTwo)
 	{
 		try
@@ -109,6 +113,8 @@ class Hname
 			console.log("alloyColor: " + e);
 		}
 	}
+	*/
+	/*
     clsCanvas()
     {
 		try
@@ -122,7 +128,8 @@ class Hname
 			console.log(e);
 		}	
     }
-		
+		*/
+		/*
 	resetCanvas()
     {
         if($(this.txt).val() === "")
@@ -130,7 +137,9 @@ class Hname
             this.clsCanvas();
         }
     }
+	*/
 	
+	/*
 	textReplacer(txt)
 	{
 		return txt
@@ -154,7 +163,8 @@ class Hname
 			.replace(String.fromCharCode(62522),String.fromCharCode(63449))
 			.replace(String.fromCharCode(61522),String.fromCharCode(61449));
 	}
-	
+	*/
+	/*
     textFactory(svgDoc, inputName, selectEndOne)
     {
         try 
@@ -248,11 +258,14 @@ class Hname
 			_target2.appendChild(_prefix2)
 			
         } 
-        catch (e) 
+        catch(e) 
         {
             console.log("textFactory: " + e);
         }
     }
+	*/
+	
+	
     drawSvg(svgDoc)
     {
         try 
@@ -286,6 +299,7 @@ class Hname
         }
     }
 	
+	/*
 	interactivity()
 	{
 		try
@@ -307,6 +321,8 @@ class Hname
 			 console.log("interactivity: " + e);
 		}
 	}
+	*/
+	/*
    render()
    {           
 		$(document)
@@ -333,7 +349,8 @@ class Hname
 				}
 			});
     }
-	
+	*/
+	/*
 	scaleCanvas()
 	{
 		$("#canvas").mouseenter(()=>
@@ -401,7 +418,7 @@ class Hname
 			}
 		});
 	}
-	
+	*/
     init()
     {
 			if($("#canvas").length > 0)
