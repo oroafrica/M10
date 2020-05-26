@@ -2,17 +2,17 @@
 
 class Hname
 {
-    constructor()
-    {
-        this.hasCanvas = false;
-        this.canvas = null;
-        this.ctx = null; 
-        this.w = 300;
+	constructor()
+	{
+		this.hasCanvas = false;
+		this.canvas = null;
+		this.ctx = null; 
+		this.w = 300;
 		this.h = 150;
-        this.svg = null;
-        this.ns = "http://www.w3.org/2000/svg";
-        this._title = $(document).find("title").text().toLowerCase();
-		
+		this.svg = null;
+		this.ns = "http://www.w3.org/2000/svg";
+		this._title = $(document).find("title").text().toLowerCase();
+
 		this.txt = null;
 		this.selOne = null;
 		this.selTwo = null;
@@ -22,22 +22,21 @@ class Hname
 	
     loadSvg()
     {
-		try
-		{
-			var msg = new Item().svg();
-			var parser = new DOMParser();
-			this.svg = parser.parseFromString(msg,"image/svg+xml");
-			this.canvas = $("canvas").get(0);
-			this.ctx = this.canvas.getContext("2d");
-			this.svg.getElementsByTagName("text")[1].textContent = String.fromCharCode(63511).concat("רי").concat(String.fromCharCode(61488)) ;
-			this.svg.getElementsByTagName("text")[0].textContent = "א@ר@י@ק";
-			this.drawSvg(this.svg);   
-			
-		}
-		catch(e)
-		{
-			console.log("loadSvg: " + e);
-		}
+			try
+			{
+				var msg = new Item().svg();
+				var parser = new DOMParser();
+				this.svg = parser.parseFromString(msg,"image/svg+xml");
+				this.canvas = $("canvas").get(0);
+				this.ctx = this.canvas.getContext("2d");
+				this.svg.getElementsByTagName("text")[1].textContent = String.fromCharCode(63511).concat("רי").concat(String.fromCharCode(61488)) ;
+				this.svg.getElementsByTagName("text")[0].textContent = "א@ר@י@ק";
+				this.drawSvg(this.svg);   
+			}
+			catch(e)
+			{
+				console.log("loadSvg: " + e);
+			}
     }
 	
 	/*
@@ -114,9 +113,9 @@ class Hname
 		}
 	}
 	*/
-	/*
-    clsCanvas()
-    {
+	
+	clsCanvas()
+	{
 		try
 		{
 			this.canvas = $("#canvas").get(0);
@@ -127,17 +126,17 @@ class Hname
 		{
 			console.log(e);
 		}	
-    }
-		*/
-		/*
+	}
+		
+
 	resetCanvas()
-    {
-        if($(this.txt).val() === "")
-        {
-            this.clsCanvas();
-        }
-    }
-	*/
+	{
+			if($(this.txt).val() === "")
+			{
+					this.clsCanvas();
+			}
+	}
+
 	
 	/*
 	textReplacer(txt)
