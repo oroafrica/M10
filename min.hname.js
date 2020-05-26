@@ -39,7 +39,6 @@ class Hname
 			}
     }
 	
-	/*
     getInput()
     {
 		try
@@ -51,49 +50,48 @@ class Hname
 			console.log("getInput: " + e)
 		}
     }
-	*/
-	/*
+
     getSelAccent()
     {
         try
 		{
-			var tgt = $('select').toArray();
+				var tgt = $('select').toArray();
 			//this.selOne =  $(tgt).eq(2);
-			$.each(tgt, (index)=> 
-			{
-				if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Heart")
+				$.each(tgt, (index)=> 
 				{
-					this.selOne =  $(tgt)[index];
-				}	
-			});
+					if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Heart")
+					{
+						this.selOne =  $(tgt)[index];
+					}	
+				});
 		}
 		catch(e)
 		{
 			console.log("getAccent" + e);
 		}
     }
-	*/
-	/*
+	
+
     getSelAlloy()
     {
-		try
-		{       
-			var tgt = $('select').toArray();
-			$.each(tgt, (index)=> 
-			{
-				if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Silver")
+			try
+			{       
+				var tgt = $('select').toArray();
+				$.each(tgt, (index)=> 
 				{
-					this.selTwo =  $(tgt)[index];
-					//console.log($(tgt)[index].options[2].text);
-				}	
-			});
-		}
-		catch(e)
-		{
-			console.log("getAlloy: " + e);
-		}
+					if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Silver")
+					{
+						this.selTwo =  $(tgt)[index];
+						console.log(this.selTwo);
+					}	
+				});
+			}
+			catch(e)
+			{
+				console.log("getAlloy: " + e);
+			}
     }
-	*/
+	
 	/*
 	alloyColor(selTwo)
 	{
@@ -438,7 +436,7 @@ class Item
 	svg()
 	{
 		var hname = 
-		"<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='300' height='150'>"
+		"<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='350' height='150'>"
 		.concat("<defs>")
 
 		.concat("<style type='text/css'>@font-face")
