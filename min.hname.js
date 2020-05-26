@@ -44,7 +44,7 @@ class Hname
 		try
 		{
 			this.txt = $("input[title='Enter your name here']"); 
-			console.log("getInput: "+ $(this.txt).val());
+			//console.log("getInput: "+ $(this.txt).val());
 		}
 		catch(e)
 		{
@@ -83,7 +83,6 @@ class Hname
 					if($(tgt).eq(index).find("option").length > 2 && $(tgt)[index].options[1].text === "Silver")
 					{
 						this.selTwo =  $(tgt)[index];
-						console.log(this.selTwo);
 					}	
 				});
 			}
@@ -309,7 +308,7 @@ class Hname
 		
 			this.resetCanvas();
 			//update text
-			//this.textFactory(this.svg, $(this.txt).val(), $(this.selOne).prop("selectedIndex"));
+			this.textFactory(this.svg, $(this.txt).val(), $(this.selOne).prop("selectedIndex"));
 			//update alloy
 			this.alloyColor($(this.selTwo).prop("selectedIndex"));
 			//paint canvas
