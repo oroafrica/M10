@@ -1,4 +1,4 @@
-import {functOne} from "two.js";
+import {functOne} from "./two.js";
 
 export function test()
 {
