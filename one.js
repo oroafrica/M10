@@ -1,6 +1,6 @@
 import {functOne} from "two.js";
 
-function test()
+export function test()
 {
     functOne("module two");
 }
