@@ -7,11 +7,12 @@
 			body { margin: 0; }
 			canvas { display: block; }
 		</style>
-		<script type="module" src="./one.js" >
-		  var d = test();
-		</script>
+		<script type="module">
+		  import {test} from './one.js';
+			test('ok');
+	</script>
 	</head>
 	<body onload="d('bob')">
-		
+		<h1>Test</h1>
 	</body>
 </html>
