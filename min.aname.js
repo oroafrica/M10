@@ -7,8 +7,8 @@ class Aname
         this.hasCanvas = false;
         this.canvas = null;
         this.ctx = null; 
-        this.w = 300;
-		this.h = 150;
+        this.w = 350;
+				this.h = 150;
         this.svg = null;
         this.ns = "http://www.w3.org/2000/svg";
         this._title = $(document).find("title").text().toLowerCase();
@@ -371,7 +371,7 @@ class Item
 	svg()
 	{
 		var hname = 
-		"<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='300' height='150'>"
+		"<svg xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='350' height='150'>"
 		.concat("<defs>")
 
 		.concat("<style type='text/css'>@font-face")
