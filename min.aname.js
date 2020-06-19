@@ -395,7 +395,7 @@ class Item
 		.concat("</defs>")
 		.concat("<g>")
 
-		.concat("<text id='txt1' style='font-size:75;stroke:none;text-anchor:middle;font-family:wz_aname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 150 135)' ></text>")
+		.concat("<text id='txt1' style='font-size:75;stroke:none;text-anchor:middle;font-family:wz_aname' filter='url(#Bevel)' fill='#CEB878' transform='matrix(1 0 0 1 175 105)' ></text>")
 
 		.concat("</g>")
 		.concat("</svg>");
